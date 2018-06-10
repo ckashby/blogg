@@ -11,5 +11,11 @@ class SiteLayoutTestTest < ActionDispatch::IntegrationTest
   	assert_select "a[href=?]", about_path, count: 2
   	assert_select "a[href=?]", contact_path, count:2
 
+    get about_path
+    assert_template 'pages/about'
+
+    get contact_path
+    assert_template 'pages/contact'
+
   end
 end
