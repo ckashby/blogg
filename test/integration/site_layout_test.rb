@@ -17,5 +17,8 @@ class SiteLayoutTestTest < ActionDispatch::IntegrationTest
     get contact_path
     assert_template 'pages/contact'
 
+    get signup_path
+    assert_template 'users/new'
+
   end
 end
